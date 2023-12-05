@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="CDx">
+  <meta property="og:title" content="CLIPDrawX"/>
+  <meta property="og:description" content="Primitive-based Explanations for Text Guided Sketch Synthesis"/>
+  <meta property="og:url" content="clipdrawx.github.io"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="CLIPDrawX Sketch Synthesis Explainability Explainable sketching">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>CLIPDrawX: Primitive-based Explanations for Text Guided Sketch Synthesis</title>
+  <link rel="icon" type="image/x-icon" href="static/images/CDx-Logo.png">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">CLIPDrawX: Primitive-based Explanations for Text Guided Sketch Synthesis</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+    <div class="container is-widescreen" id="gallery">
+      <div class="section-title has-text-centered is-centered">
+        <h2 class="title is-3">Gallery</h2><br>
+      </div>
+      <div class="container is-max-desktop is-centered has-text-centered">
+        <div class="gallery">
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/A spaceship flying in a starry sky.gif" alt="spaceship"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“A spaceship flying[..]” <span class="tooltip-text">“A spaceship flying in a starry sky”</span></h6>
+          </div>
+  
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/astronaut.gif " alt="astronaut"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“An astronaut in [..]” <span class="tooltip-text">“An astronaut in space”</span></h6>
+          </div>
+  
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/camp.gif " alt="camp"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“A camp in [..]” <span class="tooltip-text">“A camp in wilderness”</span></h6>
+          </div>        
+          
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/kitchen.gif " alt="kitchen"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“A cozy corner [..]”<span class="tooltip-text">“A cozy corner in the kitchen”</span></h6>
+          </div>
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/pond.gif " alt="pond"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“Beauty of a secluded pond[..]”<span class="tooltip-text">“Beauty of a secluded pond nestled in the heart of woods”</span></h6>
+          </div>
+          
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/dolphin.gif " alt="dolphin"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“A dolphin leaping [..]”<span class="tooltip-text">“A dolphin leaping [..]”</span></h6>
+          </div>
+  
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/dungeon.gif " alt="dungeon"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“Dark, mysterious dungeon[..]”<span class="tooltip-text">“Dark, mysterious dungeon tunnel, dimly lit”</span></h6>
+          </div>
+  
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/piano.gif " alt="piano"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“Floating musical notes[..]”<span class="tooltip-text">“Floating musical notes from a piano”</span></h6>
+          </div>
+          
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/submarine.gif " alt="submarine"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“An underwater submarine”<span class="tooltip-text">“An underwater submarine”</span></h6>
+          </div>
+          
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/motorcycle.gif " alt="motorcycle"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“A standing motorcycle”<span class="tooltip-text">“A standing motorcycle”</span></h6>
+          </div>
+  
+          
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/eiffel.gif " alt="eiffel"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“Detailed sketch of[..]”<span class="tooltip-text">“Detailed sketch of Eiffel Tower”</span></h6>
+          </div>
+  
+          
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/farm.gif " alt="farm"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“A peaceful afternoon at[..]”<span class="tooltip-text">“A peaceful afternoon at the farm sketch”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/Fast Food.gif " alt="food"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“Fast food with[..]”<span class="tooltip-text">“Fast food with soft drinks”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/faucet.gif " alt="faucet"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“A sleek faucet[..]”<span class="tooltip-text">“A sleek faucet centred in a bathroom”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/supermarket.gif " alt="supermarket"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“Local supermarket[..]”<span class="tooltip-text">“Local supermarket showcasing products”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/house.gif " alt="house"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“A sketch of a[..]”<span class="tooltip-text">“A sketch of a house in the woods”</span></h6>
+          </div>
+          
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/caravan.gif " alt="caravan"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“A caravan[..]”<span class="tooltip-text">“A caravan adventure life”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/sideboard.gif " alt="sideboard"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“A sideboard[..]”<span class="tooltip-text">“A sideboard amidst room's rhythm”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/fedelini.gif " alt="fedelini"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“Taste and aroma[..]”<span class="tooltip-text">“Taste and aroma of fedelini”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/nest.gif " alt="nest"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“Sketch of eggs[..]”<span class="tooltip-text">“Sketch of eggs laying down a nest”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/stone.gif " alt="stone"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“A solid stone”<span class="tooltip-text">“A solid stone”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/mountain.gif " alt="mountain"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“Peaks of a[..]”<span class="tooltip-text">“Peaks of a mountain range”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/octopus.gif " alt="octopus"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“A sketch of the[..]”<span class="tooltip-text">“A sketch of the mysterious octopus”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/anteater.gif " alt="anteater"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“A unique anteater”<span class="tooltip-text">“A unique anteater”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/balance.gif " alt="balance"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“The art of[..]”<span class="tooltip-text">“The art of balance scale”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/college.gif " alt="college"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“A college building[..]”<span class="tooltip-text">“A college building surrounded by greenery”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/building.gif " alt="building"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“Sketch of a building[..]”<span class="tooltip-text">“Sketch of a building in urban area”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/grape.gif " alt="grapes"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“A sketch of grapes[..]”<span class="tooltip-text">“A sketch of grapes on the vine”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/basket.gif " alt="basket"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“A sketch of a[..]”<span class="tooltip-text">“A sketch of a simple basket”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/parrot.gif " alt="parrot"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“A parrot's solitude[..]”<span class="tooltip-text">“A parrot's solitude amidst nature”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/chimpanzee.gif " alt="chimpanzee"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“Intense gaze of[..]”<span class="tooltip-text">“Intense gaze of a chimpanzee”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/class.gif " alt="class"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“A classroom filled[..]”<span class="tooltip-text">“A classroom filled with students”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/accordion.gif " alt="accordion"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“The symphony of[..]”<span class="tooltip-text">“The symphony of an accordion”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/arch.gif " alt="arch"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“A stroll through[..]”<span class="tooltip-text">“A stroll through the park archway”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/museum.gif " alt="museum"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“A journey through[..]”<span class="tooltip-text">“A journey through the gallery of a museum”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/storm.gif " alt="storm"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“A sketch of a[..]”<span class="tooltip-text">“A sketch of a furious storm”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/euphonium.gif " alt="euphonium"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“The euphonium in[..]”<span class="tooltip-text">“The euphonium in monochrome”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/basement.gif " alt="basement"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“A glimpse into[..]<span class="tooltip-text">“A glimpse into the basement”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/cactus.gif " alt="cactus"/>
+            </div>
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“A cactus in[..]”<span class="tooltip-text">“A cactus in a dry desert”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/armenian.gif " alt="armenian"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“Armenian aura on a[..]”<span class="tooltip-text">“Armenian aura on a canvas of abstract impression”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/bonsai.gif " alt="bonsai"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“A beautiful bonsai[..]”<span class="tooltip-text">“A beautiful bonsai tree”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/pig.gif " alt="pig"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“A whimsical journey of[..]”<span class="tooltip-text">“A whimsical journey of a pig with a big nose and small legs”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/ptarmigan.gif " alt="ptarmigan"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“A ptarmigan's dance[..]”<span class="tooltip-text">“A ptarmigan's dance in the sky”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/mall.gif " alt="mall"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“Busy day in a[..]”<span class="tooltip-text">“Busy day in a multi-story mall”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/park.gif " alt="park"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“A serene day in[..]”<span class="tooltip-text">“A serene day in the park”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/berry.gif " alt="berry"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“Beautiful berry-laden[..]”<span class="tooltip-text">“Beautiful berry-laden branch with leaves”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/cathedral.gif " alt="cathedral"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“Architecture of an old[..]”<span class="tooltip-text">“Architecture of an old cathedral”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/cupcake.gif " alt="cupcake"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“A cherry-topped[..]”<span class="tooltip-text">“A cherry-topped cupcake”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/cauliflower.gif " alt="cauliflower"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“A sketch of a[..]”<span class="tooltip-text">“A sketch of a cauliflower”</span></h6>
+          </div>
+
+          <div class="captioned_video">
+            <div class="inner_gallery">
+              <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/cloudy.gif " alt="cloudy"/>
+            </div>  
+            <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“Cloud brooding in the[..]”<span class="tooltip-text">“Cloud brooding in the tempestous sky”</span></h6>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  
+</body>
+</html>
