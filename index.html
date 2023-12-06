@@ -60,7 +60,7 @@
                   </div>  
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block"><sup>1</sup>IIIT Guwahati, <sup>2</sup>University of Exeter, <sup>3</sup>University Of Surrey</span>
+                    <span class="author-block"><sup>1</sup>IIIT Guwahati, <sup>2</sup>University of Exeter, <sup>3</sup>University of Surrey</span>
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                   </div>
                   
@@ -138,9 +138,10 @@
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
+        <div class="content has-text-justified">
         Our method, CLIPDrawX synthesizes vector sketches conditioned on an input text prompt using simple primitive shapes like
         <span style="color: blue;">circle</span>, <span style="color: red;">straight lines</span>, and <span style="color: rgb(95, 228, 95);">semi-circles</span>, with the highlighted words used to create the cross-attention maps.
-        
+        </div>
       </h2> 
     </div>
   </div>
@@ -252,7 +253,7 @@
           <div class="inner_gallery">
             <img class="gallery_img under grid_r_1 grid_c_1 img-border" src="static/video/dolphin.gif " alt="dolphin"/>
           </div>  
-          <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“A dolphin leaping [..]”<span class="tooltip-text">“A dolphin leaping [..]”</span></h6>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“A dolphin leaping [..]”<span class="tooltip-text">“A dolphin leaping to the sky”</span></h6>
         </div>
 
         <div class="captioned_video">
@@ -297,10 +298,12 @@
   <div class="container is-max-desktop">
     <div class="section-title has-text-centered is-centered">
       <h2 class="title is-3">From Doodles to Details: The Explainability of Sketch Synthesis</h2>
+    </div>
+      <div class="content has-text-justified"></div>
       As shown in the figure below, we demonstrate that our CLIPDrawX model offers the ability to synthesize explainable sketches whose strokes are primitive shapes like circles (second row from the top), straight lines (third row) and half circles (fourth row). These individual strokes can be tracked through their evolution in successive iterations of the optimization process. Notably, the model intuitively represents different parts of the synthesized sketch with appropriate primitive shapes. For example, the chassis and handlebars of the synthesized <em>motorcycle</em> are rendered with straight lines, while the wheels are depicted using circles and semicircles.<br>
       <br>Our model skilfully captures the dynamics of shape or scene evolution, displaying varying levels of flexibility based on the degree of freedom, which is linked to the number of control points in a shape.
       In the <em>farm</em> example, it assigns straight lines to simpler structures like a house's roof and walls, while more complex elements like grass and crops are made with semi-circles, providing more flexibility. Even more intricate structures, like trees, are rendered using circles, the most flexible shape, illustrating the model's skill in using various primitives for different levels of complexity. This strategic use of shapes enhances the model's ability to create detailed, nuanced sketches.
-    </div>
+    </div><br>
     <div class="container is-max-desktop is-centered has-text-centered">
       <div class="gallery2">
         
@@ -308,14 +311,15 @@
           <div class="inner_gallery2">
             <img class="gallery2 img-border" src="static/explain/motorcycle.png" alt="motorcycle"/>
           </div>  
-          <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“A standing motorcycle”</h6>
+          <!-- <h6 class="caption">“A standing motorcycle”</h6> -->
+          “A standing <mark>motorcycle</mark>”
         </div>
 
         <div class="captioned_video">
           <div class="inner_gallery2">
             <img class="gallery2 img-border" src="static/explain/farm.png" alt="farm"/>
           </div>  
-          <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“A peaceful afternoon at the farm sketch”</h6>
+          “A peaceful afternoon at the <mark>farm</mark> sketch”
         </div>
 
       </div>
@@ -330,7 +334,7 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="section-title has-text-centered is-centered">
-      <h2 class="title is-3">Clearing the Clutter: Exploring Patch-based Initialization</h2>
+      <h2 class="title is-3">Clearing the Clutter: Patch-based Initialization</h2>
     </div>
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls loop muted height="100%">
@@ -339,8 +343,10 @@
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
+        <div class="content has-text-justified">
       Placing different primitives at a single location is problematic, as it may result in clutter due to high point density, leading to uneven primitive distribution and messy sketches. To address this, our CLIPDrawX introduces primitives in fixed ranges or <em>patches</em>, representing all points within, rather than at precise attention map locations. It divides a <mark>\(224 \times 224\)</mark> canvas into patches of <mark>\(32 \times 32\)</mark>. 
-      </h2>
+        </div>
+    </h2>
     </div>
   </div>
 </section>
@@ -352,12 +358,14 @@
   <div class="container is-max-desktop">
     <div class="section-title has-text-centered is-centered">
       <h2 class="title is-3">Fundamental Finesse: The Debut of Primitive-level Dropout</h2>
+      <div class="content has-text-justified">
       Primitive-level dropout enhances the utilization of primitive shapes. 
 
       It facilitates the optimization process in a way that forces every primitive to independently encode some specific concept in the sketch. As a result, the number of noisy strokes in the sketch, that do not contribute towards depicting anything meaningful, is reduced.
       
       Moreover, PLD expedites convergence by reducing the number of steps required for structure creation, thanks to its ability to promptly detect relevant strokes.    <div class="container is-max-desktop is-centered has-text-centered">
-      <br>
+      </div>
+        <br>
         <div class="gallery2">
         
         <div class="captioned_video">
@@ -376,22 +384,24 @@
   <div class="container is-max-desktop">
     <div class="section-title has-text-centered is-centered">
       <h2 class="title is-3">Gentle Strokes: Sketching with Diminished Opacity</h2>
+      <div class="content has-text-justified">
       In traditional human sketching, artists often begin with a light outline or faint layout, serving as a foundation for the artwork. This initial phase sets the broader structure and composition. As the artwork advances, artists intensify strokes, especially focusing on crucial elements to make them prominent, ensuring each stroke adds value to the overall piece. Drawing a parallel to the digital realm, in CLIPDrawX, we have curated a similar methodology. Here, the initialization of primitive shapes starts with a low opacity value, denoted as \(\alpha\). This can be likened to the faint layout artists create. As the system begins its optimization process, based on relevance and significance, the opacity of certain primitives is incrementally increased. This mirrors the artist's method of iteratively intensifying strokes that are deemed crucial to the sketch's integrity.
-      <br><br>
+      </div>
+      <br>
         <div class="gallery2">
         
         <div class="captioned_video">
           <div class="inner_gallery2">
             <img class="gallery2" src="static/images/motorcycle.png" alt="opacity"/>
           </div>
-          <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“A standing motorcycle”</h6>
+          “A standing <mark>motorcycle</mark>”
         </div>
 
         <div class="captioned_video">
           <div class="inner_gallery2">
             <img class="gallery2" src="static/images/missile.png" alt="opacity"/>
           </div>
-          <h6 class="caption has-tooltip-multiline has-tooltip-bottom">“A missile ready to launch”</h6>
+          “A <mark>missile</mark> ready to launch”
         </div>
 
       </div>
@@ -423,7 +433,7 @@
 <section class="section hero">  
   <div class="container is-max-desktop">
     <div class="section-title has-text-centered is-centered">
-      <h2 class="title is-3">Patch Dynamics: The Influence of Primitive Counts</h2>
+      <h2 class="title is-3">Influence of Primitive Counts</h2>
         <div class="gallery2">
         
         <div class="captioned_video">
@@ -431,15 +441,18 @@
             <img class="gallery2" src="static/images/stroke_ablation.png" alt="stroke"/>
           </div>  
         </div>
+        <div class="content has-text-justified">
         Exploring the impact of varying primitive counts for each type within selected patches on sketch outcomes with diverse text prompts in CLIPDrawX.
-        <ul>
-          <li>1. Few primitives yield abstract sketches (rows 1-2).</li>
-          <li>2. Optimal detail emerges with 3-4 primitives (rows 3-4).</li>
-          <li>3. Excessive counts (row 5) complicate optimization, hindering synthesis.</li>
+      
+        <ul style="margin-top: 0;">
+          <li>Few primitives yield abstract sketches (rows 1-2).</li>
+          <li>Optimal detail emerges with 3-4 primitives (rows 3-4).</li>
+          <li>Excessive counts (row 5) complicate optimization, hindering synthesis.</li>
         </ul>
+
         The study recommends deploying 3 primitives per type for efficient synthesis, balancing complexity and resource utilization.
       </div>
-
+      </div>
     </div>
   </div>
 </section>
@@ -450,12 +463,13 @@
   <div class="container is-max-desktop">
     <div class="section-title has-text-centered is-centered">
       <h2 class="title is-3">State-of-the-art Comparison</h2>
+      <div class="content has-text-justified">
       Our CLIPDrawX model is compared with three related methods, including \(\textbf{CLIPDraw}\), which synthesizes CLIP-guided text-to-sketches by optimizing Bezier curves; \(\textbf{BigGAN}\), utilizing a pre-trained BigGAN generator for image production, and \(\textbf{VectorFusion}\), employing a text-conditioned diffusion model for vector sketch creation. We maintain the original settings of all these models to ensure a fair comparison. 
       As demonstrated below, our CLIPDrawX produces sketches that are noticeably cleaner than those from CLIPDraw, likely due to our method's use of primitive-level dropout and the initialization of primitives at reduced opacity. 
       The images from BigGAN often lack proper details and appropriate semantics, and the vector sketches from VectorFusion tend to be overly abstract and detail-deficient. 
       In contrast, our CLIPDrawX consistently delivers clean sketches with accurate details and semantics. 
       The reduced noise in our sketches is attributed to the minimized control points, learnable opacity for primitives, and primitive-level dropout, thus reducing the need for manual intervention and parameter adjustments. 
-       <br><br>
+       </div><br>
         <div class="gallery2">
         
         <div class="captioned_video">
@@ -477,11 +491,13 @@
   <div class="container is-max-desktop">
     <div class="section-title has-text-centered is-centered">
       <h2 class="title is-3">Final takeaways</h2><br>
+      <div class="content has-text-justified">
       We introduced the notion of explainable sketch synthesis through optimization via simple geometric primitives like straight lines, circles, and semicircles.
       To this end, we presented CLIPDrawX, a model that synthesizes highly expressive sketches in an explainable manner via simple linear transformations (computed through optimization) on such primitives, leveraging novel techniques such as strategic sketch canvas initialization for synthesizing clean sketches, and the introduction of primitive-level dropout for producing sketches
       with low noise, collectively enhance the model's efficiency and output quality.
       The extensive experiments and ablation studies underscore the model's superiority over existing methods, showcasing its capability to produce sketches that are not only aesthetically appealing but also semantically rich and explainable.
       Combining advanced optimization with intuitive design, CLIPDrawX stands out in AI-driven art creation, guiding future progress in Explainable AI and creative computing.
+      </div>
     </div>
   </div>
 </section>
