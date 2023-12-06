@@ -18,4 +18,16 @@ $(document).ready(function() {
 	
     bulmaSlider.attach();
 
+	window.onload = function() {
+		document.querySelector('.copy-button').addEventListener('click', function() {
+		  var copyText = document.querySelector("#bibtex");
+		  navigator.clipboard.writeText(copyText.innerText).then(function() {
+			console.log('Copying to clipboard was successful!');
+		  }, function(err) {
+			console.error('Could not copy text: ', err);
+		  });
+		});
+	  };
+	  
+
 })
