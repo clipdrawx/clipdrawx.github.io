@@ -44,7 +44,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">CLIPDrawX: Primitive-based Explanations for Text Guided Sketch Synthesis</h1>
+            <h1 class="title is-1 publication-title">CLIPDraw++: Text-to-Sketch Synthesis with Simple Primitives</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -156,23 +156,24 @@
         <h2 class="title is-3">Concise Overview</h2>
         <div class="content has-text-justified">
           <p>
-            With the goal of understanding the visual concepts that
-            CLIP associates with text prompts, we show that the latent
-            space of CLIP can be visualized solely in terms of linear
-            transformations on simple geometric primitives like circles
-            and straight lines. Although existing approaches achieve
-            this by sketch-synthesis-through-optimization, they do so
-            on the space of Bézier curves, which exhibit a wastefully
-            large set of structures that they can evolve into, as most of
-            them are non-essential for generating meaningful sketches.
-            We present CLIPDrawX, an algorithm that provides significantly
-            better visualizations for CLIP text embeddings, using
-            only simple primitive shapes like straight lines and circles.
-            This constrains the set of possible outputs to linear transformations
-            on these primitives, thereby exhibiting an inherently
-            simpler mathematical form. The synthesis process of
-            CLIPDrawX can be tracked end-to-end, with each visual
-            concept being explained exclusively in terms of primitives.
+            With the goal of understanding the visual concepts that 
+            CLIP associates with text prompts, we show that the latent 
+            space of CLIP can be visualized solely in terms of linear 
+            transformations on simple geometric primitives like straight 
+            lines and circles. Although existing approaches achieve 
+            this by sketch-synthesis-through-optimization, they do so 
+            on the space of higher order Bézier curves, which exhibit
+            a wastefully large set of structures that they can evolve 
+            into, as most of them are non-essential for generating 
+            meaningful sketches. We present CLIPDraw++, an algorithm 
+            that provides significantly better visualizations for CLIP
+            text embeddings, using only simple primitive shapes like
+            straight lines and circles. This constrains the set of 
+            possible outputs to linear transformations on these 
+            primitives, thereby exhibiting an inherently simpler 
+            mathematical form. The synthesis process of CLIPDraw++ 
+            can be tracked end-to-end, with each visual concept 
+            being expressed exclusively in terms of primitives. 
           </p>
         </div>
       </div>
